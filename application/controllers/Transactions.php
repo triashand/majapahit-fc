@@ -85,7 +85,7 @@ class Transactions extends CI_Controller {
     public function delete()
     {
         $id = $this->input->post('id');
-        // $destroy = $this->transaction->delete($id);
+        $destroy = $this->transaction->delete($id);
         $response = array('success' => false, 'msg' => 'Gagal hapus');
         if($destroy) {
             $response = array('success' => true, 'data' => $destroy, 'msg' => 'Data berhasil dihapus');
